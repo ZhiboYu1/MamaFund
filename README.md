@@ -1,13 +1,17 @@
 # MamaFund
 **First-prize project in Rice Datathon 2023**
 This is a collaboration project with Bruce Wang, Iris Xue, and Grace Yu. 
+
 **Inspiration**
+
 In the United States, roughly one in eight women and thousands of men will develop breast cancer at some point in their lives. Our group is well aware of the uneven distribution of mammography equipment and training throughout the United States. With our extensive population and breast cancer case predictions, our group aims to allocate limited resources to regions with the most pressing needs. We hope our model and analysis can offer more insights for future policy establishment and resource allocation.
 
 **What it does**
+
 This project predicts the population in 2020, calculates different weights that have impacts on cancer rates, analyzes the current mammography facility distribution, and finds an efficient approach for mammography fund distribution in the year of 2020 using a Least Square Regression Model.
 
 **How we built it**
+
 We divide this challenge into 3 subproblems: Demand side: estimate the population size of different age groups in different regions in 2020; calculate the weights of different elements that influence the cancer rate Supply side: find the distribution of medical facilities Fund allocation methods
 
 1(a) We predicted the 2020 population based on the provided dataset from 2010-2019. Initially, we tried three most historically used models, including Malthus, Logistics, and Leslie. All of these were not adopted because they require many more factors (including regional economy, people’s mindsets, etc) than what is available in the provided dataset.
@@ -29,18 +33,25 @@ Then we tried the Entropy Weight Method (EWM) to calculate the weights of age an
 (3) "Least Square Regression Model Method". This is our final allocation solution method. We constructed a least square regression model with the best-fit line passing through the origin point based on the Demand (x-value) and Supply (y-value). We decided to allocate all scarce resources to states whose observed y-value is lower than the expected y-value on the model. For all states below the regression line, we calculate the residual for each state to the sum of the residuals to determine the ratio of funds we allocate to each state. Compared with the previous methods, it focuses on the states with extremely scarce resources (such as California), and covers all the below-average states simultaneously.
 
 **Challenges we ran into**
+
 Find useful models that can fit into the given dataset and meet the objectives of our project.
 Learning new mathematical models including different regression models (Linear, AutoRegression, Logistic),
 Convert the goals of our project into concrete mathematical formulas that can be processed.
+
 **Accomplishments that we're proud of**
+
 Meaningful findings of connections between variables that are statistically significant in our final fund allocation plans. Eg.1., Females aged 65-80 are statistically more likely to be diagnosed with breast cancer. Eg.2., Compared with males, female breast cancer rates are significantly higher.
 Drew graphs that are both aesthetically pleasing and could clearly visualize our findings of variable connections.
 We showed continuous improvements through the development of three different approaches to allocating funds. For each approach, we explore its advantages and shortcomings and develop a new approach that eliminates the shortcomings of the previous one to optimize resource allocation.
+
 **What we learned**
+
 How to split a general problem into smaller separate tasks that are easier to approach;
 Group Collaboration. In this project, we learned the importance of modularity. Our team members are assigned separate but closely related tasks. Throughout the entire project, we worked simultaneously while still communicating with each other to share ideas and organize our inputs and outputs into the same format, so that our module works can be combined into an entire comprehensive analysis project.
 Technical Skills: Data Visualization, Data Cleaning, Mathematical Modelling, Python
+
 **What's next for MaMaFund**
+
 We’ll try to cover more multi-dimensional factors, such as climate, diet, race, culture, etc, and use better models to weigh each variable.
 States are too general for us to examine our facility distribution. We may split states down into more separate areas so that I can express our concerns to more minority groups.
 In population prediction, we may introduce machine learning to help us find features that could not be easily predicted by humans so that we can better predict future demand distributions.
