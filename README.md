@@ -1,5 +1,6 @@
 # MamaFund
 **First-prize project in Rice Datathon 2023**
+
 This is a collaboration project with Bruce Wang, Iris Xue, and Grace Yu. 
 
 **Inspiration**
@@ -56,5 +57,7 @@ We’ll try to cover more multi-dimensional factors, such as climate, diet, race
 States are too general for us to examine our facility distribution. We may split states down into more separate areas so that I can express our concerns to more minority groups.
 In population prediction, we may introduce machine learning to help us find features that could not be easily predicted by humans so that we can better predict future demand distributions.
 We may develop more reasonable ways to allocate funds. Currently, we arbitrarily ignore areas that we believe are above average. However, in the real world, our fund distribution should take all regions into our consideration.
+
 **References:**
+
 The dataset of breast cancer cases from 2010-2019: https://wonder.cdc.gov/ Entropy-Weight-Method-Based Integrated Models: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9317321/ Breast Cancer Facts and Statistics: https://www.breastcancer.org/facts-statistics
